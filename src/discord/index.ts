@@ -1,24 +1,42 @@
-const { REST } = require('@discordjs/rest');
-const { Routes } = require('discord-api-types/v9');
+const Discord = require('discord.js');
+require('dotenv').config();
+const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES" ,"GUILD_BANS","GUILD_EMOJIS_AND_STICKERS"] })
 
-const commands = [{
-  name: 'ping',
-  description: 'Replies with Pong!'
-}]; 
-
-const rest = new REST({ version: '9' }).setToken('token');
-
-(async () => {
-  try {
-    console.log('Started refreshing application (/) commands.');
-
-    await rest.put(
-      Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID),
-      { body: commands },
-    );
-
-    console.log('Successfully reloaded application (/) commands.');
-  } catch (error) {
-    console.error(error);
-  }
-})();
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setPresence({ activities: [{ name: 'activity' }], status: 'online' });
+    const statusArray = [
+      'Kumi guys, WATCHING',
+      'movie on netflix, WATCHING',
+      'Kumi website, PLAYING',
+      'kumi history, WATCHING',
+      'random podcast, LISTENING',
+      ' morning news, LISTENING',
+      'Moderator working, WATCHING',
+      ' american football with my best friend, PLAYING',
+      'random music in spotify, LISTENING',
+      '🗺️emoji war💂, PLAYING', 
+      'kumi podcast, LISTENING',
+      'Hide and seek, PLAYING',
+      'giveaways, WATCHING',
+      'Kumi butter balm, PLAYING',
+      'everyone online, WATCHING',
+      'Simon says not simoon says, PLAYING',
+      'GTA V, PLAYING',
+      'NETFLIX, WATCHING',
+      'Freefire, PLAYING',
+      'Roblox, PLAYING',
+      'Monkeytype.com, PLAYING',
+    ];
+  
+      setInterval(() => {
+        client.user.setStatus('online');
+        const random = statusArray[Math.floor(Math.random() * statusArray.length)].split(', ')
+        const status = random[0];
+        const mode = random[1];
+        client.user.setActivity(status, { type: mode })
+  
+      }, 3000)
+  });
+  
+  client.login(process.env.DISCORD_TOKEN);

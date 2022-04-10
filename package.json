@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "prettier --write .",
     "start:discord": "node discord",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

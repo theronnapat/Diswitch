@@ -10,20 +10,20 @@ export default function discord() {
   client.once("ready", () => {
     console.log(`Discord : Login as ${client.user.tag}`);
 
-    const guildId = process.env.DISCORD_GUILD_ID
-    const guild = client.guilds.cache.get(guildId)
-    let commands
+    const guildId = process.env.DISCORD_GUILD_ID;
+    const guild = client.guilds.cache.get(guildId);
+    let commands;
 
     if (guild) {
-      commands = guild.commands
+      commands = guild.commands;
     } else {
-      commands = client.application?.commands
+      commands = client.application?.commands;
     }
 
     commands?.create({
-      name: 'hello',
-      description: 'Say hello to DisWitch 👋🏻',
-    })
+      name: "hello",
+      description: "Say hello to DisWitch 👋🏻",
+    });
   });
   Ping(client);
 

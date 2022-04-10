@@ -1,15 +1,15 @@
 export default function Ping(client) {
-  client.on('interactionCreate', (interaction) => {
+  client.on("interactionCreate", (interaction) => {
     if (!interaction.isCommand()) {
-      return
+      return;
     }
-    const { commandName, options } = interaction
+    const { commandName, options } = interaction;
 
-    if (commandName === 'hello') {
+    if (commandName === "hello") {
       interaction.reply({
-        content: 'Hello 👋🏻',
-        ephemeral: true // Only the user can see this reply
-      })
+        content: "Hello 👋🏻",
+        ephemeral: true, // Only the user can see this reply
+      });
     }
-  })
+  });
 }

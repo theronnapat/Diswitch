@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 require('dotenv').config();
-const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES" ,"GUILD_BANS","GUILD_EMOJIS_AND_STICKERS"] })
+const DSclient = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES" ,"GUILD_BANS","GUILD_EMOJIS_AND_STICKERS"] })
 
 const prefix = process.env.PREFIX;
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setPresence({ activities: [{ name: 'activity' }], status: 'online' });
+DSclient.on('ready', () => {
+  console.log(`Logged in as ${DSclient.user.tag}!`);
+  DSclient.user.setPresence({ activities: [{ name: 'activity' }], status: 'online' });
   const statusArray = [
     'Kumi guys, WATCHING',
     'movie on netflix, WATCHING',
@@ -32,13 +32,13 @@ client.on('ready', () => {
   ];
 
     setInterval(() => {
-      client.user.setStatus('online');
+      DSclient.user.setStatus('online');
       const random = statusArray[Math.floor(Math.random() * statusArray.length)].split(', ')
       const status = random[0];
       const mode = random[1];
-      client.user.setActivity(status, { type: mode })
+      DSclient.user.setActivity(status, { type: mode })
 
     }, 3000)
 });
 
-client.login(process.env.DISCORD_TOKEN);
+DSclient.login(process.env.DISCORD_TOKEN);

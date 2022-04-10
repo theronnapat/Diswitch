@@ -1,6 +1,5 @@
-const tmi = require('tmi.js');
-require("dotenv").config();
-
+import tmi from 'tmi.js'
+export default function twitch(){
 // Define configuration options
 const opts = {
   identity: {
@@ -19,6 +18,12 @@ const client = new tmi.client(opts);
 client.on('message', onMessageHandler);
 client.on('connected', onConnectedHandler);
 
+client.on('message', (channel, tags, message, self) => {
+	// "Alca: Hello, World!"
+	console.log(`${tags['display-name']}: ${message}`);
+});
+	
+
 // Connect to Twitch:
 client.connect();
 
@@ -35,7 +40,7 @@ function onMessageHandler (target, context, msg, self) {
     client.say(target, `You rolled a ${num}`);
     console.log(`* Executed ${commandName} command`);
   } else {
-    console.log(`* Unknown command ${commandName}`);
+    console.log(`* Unknow command ${commandName}`);
   }
 }
 
@@ -48,4 +53,5 @@ function rollDice () {
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
+}
 }

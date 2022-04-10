@@ -2,10 +2,9 @@
   "name": "diswitch",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "lint": "prettier --write .",
-    "start:discord": "node discord",
+    "start:discord": "node discord/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +19,8 @@
   },
   "homepage": "https://github.com/ronnapatp/diswitch#readme",
   "dependencies": {
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.31.0",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0"
   },

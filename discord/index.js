@@ -14,4 +14,10 @@ client.on("ready", () => {
   client.user.setPresence({ status: "online" });
 });
 
+client.on('message', (message) => {
+    if (message.content === 'ping') {
+        message.reply('pong');
+    }          
+})
+
 client.login(process.env.DISCORD_TOKEN);

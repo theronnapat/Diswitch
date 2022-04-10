@@ -11,7 +11,7 @@ export default function discord() {
 
   // When the client is ready, run this code (only once)
   client.once("ready", () => {
-    console.log("Ready!")
+    console.log(`Discord : Login as ${client.user.tag}`)
 
     Ping(client)
   })

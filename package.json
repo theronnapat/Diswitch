@@ -29,6 +29,7 @@
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "dotenv-flow": "^3.2.0",
+    "eslint": "^8.13.0",
     "tmi.js": "^1.8.5"
   },
   "devDependencies": {

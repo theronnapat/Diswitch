@@ -11,8 +11,9 @@
     "node": ">=10"
   },
   "scripts": {
-    "dev": "node-dev .",
+    "dev": "ts-node src/discord.ts && ts-node src/twitch.ts",
     "start:discord": "ts-node src/discord.ts",
+    "start:twitch": "ts-node src/twitch.ts",
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",

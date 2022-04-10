@@ -1,23 +1,50 @@
-const Discord = require("discord.js");
-require("dotenv").config();
-const client = new Discord.Client({
-  intents: [
-    "GUILDS",
-    "GUILD_MESSAGES",
-    "GUILD_BANS",
-    "GUILD_EMOJIS_AND_STICKERS",
-  ],
-});
+import { Client, Collection, Intents, Interaction, Message} from "discord.js"
+import Ping from "./commands/ping.js"
+export default function discord() {
+  // Create a new client instance
+  const client = new Client({
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+  })
 
-client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setPresence({ status: "online" });
-});
+  client.commands = new Collection()
 
-client.on('message', (message) => {
-    if (message.content === 'ping') {
-        message.reply('pong');
-    }          
-})
 
-client.login(process.env.DISCORD_TOKEN);
+  // When the client is ready, run this code (only once)
+  client.once("ready", () => {
+    console.log("Ready!")
+
+    Ping(client)
+  })
+
+  client.on("interactionCreate", async (interaction) => {
+    if (!interaction.isCommand()) return
+
+    const command = client.commands.get(interaction.commandName)
+
+    if (!command) return
+
+    try {
+      await command.execute(interaction)
+    } catch (error) {
+      console.error(error)
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      })
+    }
+  })
+
+  // Intents.FLAGS.GUILD_MESSAGES
+  client.on("messageCreate", async (msg) => {
+    if (msg.author.bot) return
+
+    console.log("received message", `${msg.author.tag}: ${msg.content}`)
+
+    if (msg.content.match(/^ping/i)) {
+      msg.channel.send("Pong from dev env!")
+    }
+  })
+
+  // Login to Discord with your client's token
+  client.login(process.env.DISCORD_TOKEN)
+}

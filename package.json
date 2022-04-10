@@ -1,5 +1,5 @@
 {
-  "name": "diswitch",
+  "name": "disswitch",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ronnapatp/diswitch.git"
+    "url": "git+ssh://git@github.com/ronnapatp/Disswitch.git"
   },
   "keywords": [],
   "author": "Ronnapat Srivoravilai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ronnapatp/diswitch/issues"
+    "url": "https://github.com/ronnapatp/Disswitch/issues"
   },
-  "homepage": "https://github.com/ronnapatp/diswitch#readme",
+  "homepage": "https://github.com/ronnapatp/Disswitch#readme",
   "dependencies": {
     "@discordjs/rest": "^0.3.0",
     "discord-api-types": "^0.31.0",

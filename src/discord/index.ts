@@ -4,39 +4,8 @@ const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES" ,"GUILD
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
-    client.user.setPresence({ activities: [{ name: 'activity' }], status: 'online' });
-    const statusArray = [
-      'Kumi guys, WATCHING',
-      'movie on netflix, WATCHING',
-      'Kumi website, PLAYING',
-      'kumi history, WATCHING',
-      'random podcast, LISTENING',
-      ' morning news, LISTENING',
-      'Moderator working, WATCHING',
-      ' american football with my best friend, PLAYING',
-      'random music in spotify, LISTENING',
-      '🗺️emoji war💂, PLAYING', 
-      'kumi podcast, LISTENING',
-      'Hide and seek, PLAYING',
-      'giveaways, WATCHING',
-      'Kumi butter balm, PLAYING',
-      'everyone online, WATCHING',
-      'Simon says not simoon says, PLAYING',
-      'GTA V, PLAYING',
-      'NETFLIX, WATCHING',
-      'Freefire, PLAYING',
-      'Roblox, PLAYING',
-      'Monkeytype.com, PLAYING',
-    ];
-  
-      setInterval(() => {
-        client.user.setStatus('online');
-        const random = statusArray[Math.floor(Math.random() * statusArray.length)].split(', ')
-        const status = random[0];
-        const mode = random[1];
-        client.user.setActivity(status, { type: mode })
-  
-      }, 3000)
-  });
+    // console.log(`Invite your bot : https://discord.com/api/oauth2/authorize?client_id=${process.env.DISCORD_TOKEN}&permissions=8&scope=bot`)
+    client.user.setPresence({ status: 'online' });
+});
   
   client.login(process.env.DISCORD_TOKEN);

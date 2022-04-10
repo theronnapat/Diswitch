@@ -5,6 +5,7 @@
   "scripts": {
     "lint": "prettier --write .",
     "start:discord": "node discord/index.js",
+    "start:twitch": "node twitch/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

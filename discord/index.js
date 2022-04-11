@@ -1,5 +1,5 @@
 import { Client, Collection, Intents, Interaction, Message } from "discord.js";
-import Ping from "./commands/hello.js";
+import Hello from "./commands/hello.js";
 export default function discord() {
   const client = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
@@ -25,7 +25,7 @@ export default function discord() {
       description: "Say hello to DisWitch 👋🏻",
     });
   });
-  Ping(client);
+  Hello(client);
 
   client.login(process.env.DISCORD_TOKEN);
 }

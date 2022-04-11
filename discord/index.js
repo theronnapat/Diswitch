@@ -1,5 +1,6 @@
 import { Client, Collection, Intents, Interaction, Message } from "discord.js";
 import Hello from "./commands/hello.js";
+import UserInfo from "./commands/userinfo.js"
 export default function discord() {
   const client = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
@@ -24,8 +25,13 @@ export default function discord() {
       name: "hello",
       description: "Say hello to DisWitch 👋🏻",
     });
+    commands?.create({
+      name: "user",
+      description: "Look your user info 😃",
+    });
   });
   Hello(client);
+  UserInfo(client);
 
   client.login(process.env.DISCORD_TOKEN);
 }

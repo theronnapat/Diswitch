@@ -1,3 +1,4 @@
 export const config = {
-    discord: "XXXXXXXX"
+    discord: "XXXXXXXX",
+    twitter: "username"
 }

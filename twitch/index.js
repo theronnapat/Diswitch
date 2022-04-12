@@ -1,6 +1,7 @@
 import tmi from "tmi.js";
 import Ping from "./commands/ping.js";
 import Discord from "./commands/discord.js";
+import Twitter from "./commands/twitter.js";
 
 export default function twitch() {
   // Define configuration options
@@ -24,7 +25,9 @@ export default function twitch() {
   });
   
   Ping(client);
-  Discord(client)
+  Discord(client);
+  Twitter(client)
+  
   // Connect to Twitch:
   client.connect();
 

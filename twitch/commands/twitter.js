@@ -1,6 +1,6 @@
 import { config } from "../config.js";
 
-export default function Discord(client) {
+export default function Twitter(client) {
     client.on("message", (channel, tags, message, self) => {
       if (self) return;
   

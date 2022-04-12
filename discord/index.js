@@ -1,7 +1,7 @@
 import { Client, Collection, Intents, Interaction, Message } from "discord.js";
 import Hello from "./commands/hello.js";
 import UserInfo from "./commands/userinfo.js"
-import Joke from "./commands/joke.js";
+import Joke from "./commands/play/joke.js";
 export default function discord() {
   const client = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],

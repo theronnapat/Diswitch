@@ -1,6 +1,7 @@
 import { Client, Collection, Intents, Interaction, Message } from "discord.js";
 import Hello from "./commands/hello.js";
 import UserInfo from "./commands/userinfo.js"
+import Joke from "./commands/joke.js";
 export default function discord() {
   const client = new Client({
     intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
@@ -29,9 +30,14 @@ export default function discord() {
       name: "user",
       description: "Look your user info 😃",
     });
+    commands?.create({
+      name: "joke",
+      description: "Random joke from Diswitch 🤪",
+    });
   });
   Hello(client);
   UserInfo(client);
+  Joke(client)
 
   client.login(process.env.DISCORD_TOKEN);
 }

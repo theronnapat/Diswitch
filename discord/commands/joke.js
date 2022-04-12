@@ -21,11 +21,11 @@ const jokes = [
 let joke = jokes[Math.floor(Math.random() * jokes.length)]
 
 const sendjoke = new MessageEmbed()
-	.setColor('##0ea5e9')
+	.setColor('#0ea5e9')
 	.setTitle('DISWITCH JOKE')
 	.setDescription(joke.joke)
 	.setTimestamp()
-	.setFooter({ text: 'Add joke at https://github.com/ronnapatp/diswitch' });
+	.setFooter({ text: 'Diswitch Bot' });
 
 export default function Joke(client) {
     client.on("interactionCreate", (interaction) => {
@@ -35,7 +35,7 @@ export default function Joke(client) {
       const { commandName, options } = interaction;
   
       if (commandName === "joke") {
-        interaction.reply({ embeds: [exampleEmbed] });
+        interaction.reply({ embeds: [sendjoke] });
       }
     });
   }

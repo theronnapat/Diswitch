@@ -1,5 +1,6 @@
 import tmi from "tmi.js";
 import Ping from "./commands/ping.js";
+import Discord from "./commands/discord.js";
 
 export default function twitch() {
   // Define configuration options
@@ -20,9 +21,10 @@ export default function twitch() {
   client.on("message", (channel, tags, message, self) => {
     // "Alca: Hello, World!"
     console.log(`[${tags["display-name"]}]: ${message}`);
-    Ping(client);
   });
-
+  
+  Ping(client);
+  Discord(client)
   // Connect to Twitch:
   client.connect();
 

@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ronnapatp/diswitch/issues"
   },
-  "homepage": "https://github.com/ronnapatp/diswitch#readme"
+  "homepage": "https://github.com/ronnapatp/diswitch#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "dotenv-flow": "^3.2.0"
+  }
 }

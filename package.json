@@ -5,6 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "dev": "ts-node .",
+    "start:discord": "ts-node discord.ts",
+    "start:twitch": "ts-node twitch.ts",
     "lint": "yarn prettier --write ."
   },
   "repository": {

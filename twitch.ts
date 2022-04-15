@@ -21,3 +21,6 @@ export default function twitch() {
     }
   });
 }
+import dotenvFlow from "dotenv-flow";
+dotenvFlow.config();
+twitch()

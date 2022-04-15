@@ -155,6 +155,11 @@ node-fetch@^2.6.1:
   dependencies:
     whatwg-url "^5.0.0"
 
+prettier@2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
+  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
+
 tmi.js@^1.8.5:
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/tmi.js/-/tmi.js-1.8.5.tgz#8298821677599f163af075113f5d1bd51a648087"

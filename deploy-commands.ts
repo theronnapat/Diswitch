@@ -9,18 +9,6 @@ const clientId = process.env.DISCORD_CLIENT_ID as string
 const guildId = process.env.DISCORD_GUILD_ID as string
 const token = process.env.DISCORD_TOKEN as string
 
-// const commands = [
-//   new SlashCommandBuilder()
-//     .setName("ping")
-//     .setDescription("Replies with pong!"),
-//   new SlashCommandBuilder()
-//     .setName("server")
-//     .setDescription("Replies with server info!"),
-//   new SlashCommandBuilder()
-//     .setName("user")
-//     .setDescription("Replies with user info!"),
-// ].map((command) => command.toJSON())
-
 const commands = []
 const commandFiles = fs
   .readdirSync("./discord-commands")

@@ -74,6 +74,6 @@ export default function discord() {
   client.login(process.env.DISCORD_TOKEN);
 }
 
-import dotenvFlow from "dotenv-flow";
-dotenvFlow.config();
-discord()
+// import dotenvFlow from "dotenv-flow";
+// dotenvFlow.config();
+// discord()

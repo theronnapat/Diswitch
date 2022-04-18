@@ -38,7 +38,7 @@ export default function discord() {
 
   // When the client is ready, run this code (only once)
   client.once("ready", () => {
-    console.log("Ready!");
+    console.log("Discord bot is Ready!");
   });
 
   client.on("interactionCreate", async (interaction: Interaction) => {

@@ -1,1 +1,3 @@
-# Diswitch Project
+<center>
+    ![](./assets/diswitch2.png)
+</center>

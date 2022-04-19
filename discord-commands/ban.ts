@@ -17,14 +17,14 @@ module.exports = {
       .setTitle(`You just ban <@${member.user.id}>!`)
       .setTimestamp()
       .setFooter({ text: "Diswitch" });
-    
-      const nopermission = new MessageEmbed()
+
+    const nopermission = new MessageEmbed()
       .setColor("#000000")
       .setTitle(`You don't have permission to ban user!`)
       .setTimestamp()
       .setFooter({ text: "Diswitch" });
-    
-      if (members.permissions.has("BAN_MEMBERS") == true) {
+
+    if (members.permissions.has("BAN_MEMBERS") == true) {
       await member.ban();
       await interaction.reply({ embeds: [baned] });
     } else {

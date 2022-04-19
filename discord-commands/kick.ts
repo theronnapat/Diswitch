@@ -17,14 +17,14 @@ module.exports = {
       .setTitle(`You just kick <@${member.user.id}>!`)
       .setTimestamp()
       .setFooter({ text: "Diswitch" });
-    
-      const nopermission = new MessageEmbed()
+
+    const nopermission = new MessageEmbed()
       .setColor("#000000")
       .setTitle(`You don't have permission to kick user!`)
       .setTimestamp()
       .setFooter({ text: "Diswitch" });
-    
-      if (members.permissions.has("KICK_MEMBERS") == true) {
+
+    if (members.permissions.has("KICK_MEMBERS") == true) {
       await member.kick();
       await interaction.reply({ embeds: [kicked] });
     } else {

@@ -8,7 +8,8 @@
     "update": "ts-node deploy-commands.ts",
     "start:discord": "ts-node discord.ts",
     "start:twitch": "ts-node twitch.ts",
-    "lint": "yarn prettier --write ."
+    "lint": "yarn prettier --write .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "eslint": "^8.13.0",
-    "prettier": "2.6.2"
+    "prettier": "2.6.2",
+    "husky": "^7.0.0"
   }
 }

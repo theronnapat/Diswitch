@@ -1,3 +1,1 @@
-<center>
-    ![](./assets/diswitch2.png)
-</center>
+![](./assets/diswitch4.png)

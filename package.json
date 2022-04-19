@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
-  "licenses": "MIT",
   "scripts": {
     "dev": "ts-node .",
     "update": "ts-node deploy-commands.ts",
@@ -16,12 +15,12 @@
     "url": "git+ssh://git@github.com/theronnapatp/diswitch.git"
   },
   "keywords": [],
-  "author": "Ronnapat Srivoravilai",
+  "author": "The Ronnapat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ronnapatp/diswitch/issues"
+    "url": "https://github.com/theronnapatp/diswitch/issues"
   },
-  "homepage": "https://github.com/ronnapatp/diswitch#readme",
+  "homepage": "https://github.com/theronnapatp/diswitch#readme",
   "dependencies": {
     "@discordjs/builders": "^0.12.0",
     "@discordjs/rest": "^0.4.0",

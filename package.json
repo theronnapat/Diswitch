@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "licenses": "MIT",
   "scripts": {
     "dev": "ts-node .",
     "update": "ts-node deploy-commands.ts",

@@ -1,4 +1,5 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
+import { Permissions, GuildMember } from "discord.js";
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -8,8 +9,13 @@ module.exports = {
       option.setName("target").setDescription("Select a user").setRequired(true)
     ),
   async execute(interaction: any) {
-    await interaction.reply("Kick!");
-    const member = interaction.options.getMember("target");
-    member.kick();
+    const member = interaction.member as GuildMember;
+    if (member.permissions.has("KICK_MEMBERS") == true){
+      const member = interaction.options.getMember("target");
+      member.kick();
+      await interaction.reply("Kick!");
+    } else {
+      await interaction.reply("You don't have permission")
+    }
   },
 };

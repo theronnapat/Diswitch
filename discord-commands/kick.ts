@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
-import { Permissions, GuildMember } from "discord.js";
+import { GuildMember, MessageEmbed } from "discord.js";
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -9,13 +9,23 @@ module.exports = {
       option.setName("target").setDescription("Select a user").setRequired(true)
     ),
   async execute(interaction: any) {
-    const member = interaction.member as GuildMember;
-    if (member.permissions.has("KICK_MEMBERS") == true){
-      const member = interaction.options.getMember("target");
-      member.kick();
-      await interaction.reply("Kick!");
+    const members = interaction.member as GuildMember;
+    const member = interaction.options.getMember("target");
+    const kicked = new MessageEmbed()
+      .setColor('#000000')
+      .setTitle(`You just kick <@${member.user.id}>!`)
+      .setTimestamp()
+      .setFooter({ text: 'Diswitch'})
+    const nopermission = new MessageEmbed()
+      .setColor('#000000')
+      .setTitle(`You don't have permission to kick user!`)
+      .setTimestamp()
+      .setFooter({ text: 'Diswitch'})
+    if (members.permissions.has("KICK_MEMBERS") == true){
+      await member.kick();
+      await interaction.reply({ embeds: [kicked] });
     } else {
-      await interaction.reply("You don't have permission")
+      await interaction.reply({ embeds: [nopermission] })
     }
   },
 };

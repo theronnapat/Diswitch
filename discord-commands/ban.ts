@@ -9,8 +9,8 @@ module.exports = {
       option.setName("target").setDescription("Select a user").setRequired(true)
     ),
   async execute(interaction: any) {
-    const members = interaction.member as GuildMember
-    const member = interaction.options.getMember("target");
+    const members = interaction.member as GuildMember;
+    const member = interaction.options.getMember("target")
 
     const baned = new MessageEmbed()
       .setColor("#000000")

@@ -11,6 +11,11 @@
     "lint": "yarn prettier --write .",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && git add -A ."
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/ronnapatp/diswitch.git"
@@ -35,7 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "eslint": "^8.13.0",
-    "prettier": "2.6.2",
-    "husky": "^7.0.0"
+    "husky": "^7.0.4",
+    "prettier": "2.6.2"
   }
 }

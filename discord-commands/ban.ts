@@ -10,7 +10,7 @@ module.exports = {
     ),
   async execute(interaction: any) {
     const members = interaction.member as GuildMember;
-    const member = interaction.options.getMember("target")
+    const member = interaction.options.getMember("target");
 
     const baned = new MessageEmbed()
       .setColor("#000000")

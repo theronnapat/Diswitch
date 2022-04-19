@@ -8,17 +8,11 @@
     "update": "ts-node deploy-commands.ts",
     "start:discord": "ts-node discord.ts",
     "start:twitch": "ts-node twitch.ts",
-    "lint": "yarn prettier --write .",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && git add -A ."
-    }
+    "lint": "yarn prettier --write ."
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ronnapatp/diswitch.git"
+    "url": "git+ssh://git@github.com/theronnapatp/diswitch.git"
   },
   "keywords": [],
   "author": "Ronnapat Srivoravilai",
@@ -40,7 +34,6 @@
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "eslint": "^8.13.0",
-    "husky": "^7.0.4",
     "prettier": "2.6.2"
   }
 }

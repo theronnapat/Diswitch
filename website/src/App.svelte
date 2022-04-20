@@ -1,29 +1,10 @@
 <script>
-	export let name;
 </script>
 
+<head>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
 <main>
-	<h1>DisWitch</h1>
+	<h1 class="text-center text-sky-400 text-5xl mt-10">DisWitch</h1>
 </main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>

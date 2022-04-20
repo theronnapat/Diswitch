@@ -1,10 +1,10 @@
 <p align="center">
     <img src="./assets/diswitch4.png" />
-    <h1>
+    <h1 align="center">
         Diswitch Project
     <h1>
-Discord and Twitch Simple bot
 </p>
+Discord and Twitch Simple bot
 
 
 ## What is Diswitch Project

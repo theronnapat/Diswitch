@@ -1,9 +1,9 @@
 <p align="center">
-    <img src="./assets/diswitch4.png" />
+    <img src="./assets/diswitch4.png" width="60%" />
+</p>
     <h1 align="center">
         Diswitch Project
     <h1>
-</p>
 Discord and Twitch Simple bot
 
 

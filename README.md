@@ -1,11 +1,11 @@
-<center>
+<p align="center">
     <img src="./assets/diswitch4.png" />
     <h1>
         Diswitch Project
     <h1>
-</center>
-
 Discord and Twitch Simple bot
+</p>
+
 
 ## What is Diswitch Project
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

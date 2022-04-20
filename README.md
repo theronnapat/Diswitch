@@ -1,9 +1,7 @@
-<p align="center">
-    <img src="./assets/diswitch4.png" width="20%" />
-</p>
-    <h1 align="center">
-        Diswitch Project
-    <h1>
+<img src="./assets/diswitch4.png" width="20%" align="center" />
+<h1 align="center">
+    Diswitch Project
+<h1>
 
 
 

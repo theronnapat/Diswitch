@@ -11,6 +11,15 @@ module.exports = {
   async execute(interaction: any) {
     const members = interaction.member as GuildMember;
     const member = interaction.options.getMember("target");
+    const report = new MessageEmbed()
+      .setColor("#000000")
+      .setTitle("Kick Report")
+      .addFields(
+        { name: 'Kick by', value: `<@${interaction.user.id}>`, inline: true},
+        { name: 'Kick', value: `<@${member.user.id}>`, inline: true},
+      )
+      .setTimestamp()
+      .setFooter({ text: "Diswitch report" });
 
     const kicked = new MessageEmbed()
       .setColor("#000000")

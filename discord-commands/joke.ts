@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
-import { en } from "./joke/index";
+import { en, th } from "./joke/index";
 
 // console.log("Joke :", joke.joke)
 
@@ -8,7 +8,12 @@ module.exports = {
     .setName("joke")
     .setDescription("Joke from Diswitch!"),
   async execute(interaction: any) {
-    const joke = en[Math.round(Math.random() * en.length)];
-    await interaction.reply(`Joke : ${joke.joke}`);
+    if ( process.env.ENGLISH === 'true' ){
+      const jokeen = en[Math.round(Math.random() * en.length)];
+      await interaction.reply(`Joke : ${jokeen.joke}`);
+    } else {
+      const joketh = th[Math.round(Math.random() * th.length)];
+      await interaction.reply(`Joke : ${joketh.joke}`);
+    }
   },
 };

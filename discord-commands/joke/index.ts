@@ -1,4 +1,4 @@
-export const message = [
+export const en = [
   {
     joke: "Why did the scarecrow win an award? Because he was outstanding in his field.",
   },
@@ -33,3 +33,8 @@ export const message = [
   { joke: "Why did the drum take a nap? It was beat." },
   { joke: "Where do hamburgers go dancing?  They go to the meat-ball." },
 ];
+
+export const th = [
+  { joke: 'ไวพต เพรชตะพึต เฮ้ย! ไวเพรช พีตตะพต เฮ้ย!'},
+  { joke: 'บทสนทนาของคู่รักคู่หนึ่ง\nช : เราเลิกกันเถอะผมรู้ว่าคุณรักผมน้อยลง\nญ : ฉันไม่เคยรักคุณน้อยลงนะ\nช : น้อยสิ เดือนก่อนคุณรักผม 31 วัน เดือนนี้คุณรักผม 30 วัน\nญ : พ่อง'}
+]

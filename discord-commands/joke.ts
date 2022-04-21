@@ -8,7 +8,7 @@ module.exports = {
     .setName("joke")
     .setDescription("Joke from Diswitch!"),
   async execute(interaction: any) {
-    if ( process.env.ENGLISH === 'true' ){
+    if (process.env.ENGLISH === "true") {
       const jokeen = en[Math.round(Math.random() * en.length)];
       await interaction.reply(`Joke : ${jokeen.joke}`);
     } else {

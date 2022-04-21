@@ -15,19 +15,19 @@ module.exports = {
       .setColor("#000000")
       .setTitle("Kick Report")
       .addFields(
-        { name: 'Kick by', value: `<@${interaction.user.id}>`, inline: true},
-        { name: 'Kick', value: `<@${member.user.id}>`, inline: true},
+        { name: "Kick by", value: `<@${interaction.user.id}>`, inline: true },
+        { name: "Kick", value: `<@${member.user.id}>`, inline: true }
       )
       .setTimestamp()
       .setFooter({ text: "Diswitch report" });
 
     const kicked = new MessageEmbed()
       .setColor("#000000")
-      .setDescription(`You just kick <@${member.user.id}> !`)
+      .setDescription(`You just kick <@${member.user.id}> !`);
 
     const nopermission = new MessageEmbed()
       .setColor("#000000")
-      .setTitle(`You don't have permission to kick user!`)
+      .setTitle(`You don't have permission to kick user!`);
 
     if (members.permissions.has("KICK_MEMBERS") == true) {
       await member.kick();

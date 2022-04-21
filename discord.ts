@@ -29,8 +29,9 @@ export default function discord() {
     .readdirSync("./discord-commands")
     .filter((file: string) => file.endsWith(".ts"));
 
-  const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.ts'));
-
+  const eventFiles = fs
+    .readdirSync("./events")
+    .filter((file) => file.endsWith(".ts"));
 
   for (const file of commandFiles) {
     const command = require(`./discord-commands/${file}`);

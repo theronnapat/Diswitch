@@ -1,3 +1,6 @@
+<script>
+    import Github from './githubIcon.svelte'
+</script>
 
 <nav class="bg-white border-gray-200 py-2.5 rounded dark:bg-gray-800 border-b">
     <div class="container px-5 max-w-3xl mx-auto xl:max-w-4xl flex flex-wrap justify-between items-center">
@@ -6,7 +9,7 @@
     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
     </a>
     <div class="flex md:order-2">
-    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Github</button>
+    <button type="button" on:click={() => {window.location.href = "https://github.com/theronnapat/Diswitch"}} class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex"><span class="mr-2 text-3xl"><Github /></span>Github</button>
     <button data-collapse-toggle="mobile-menu-4" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-4" aria-expanded="false">
     <span class="sr-only">Open main menu</span>
     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>

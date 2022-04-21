@@ -29,6 +29,9 @@ export default function discord() {
     .readdirSync("./discord-commands")
     .filter((file: string) => file.endsWith(".ts"));
 
+  const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.ts'));
+
+
   for (const file of commandFiles) {
     const command = require(`./discord-commands/${file}`);
     // Set a new item in the Collection
@@ -36,10 +39,19 @@ export default function discord() {
     client.commands.set(command.data.name, command);
   }
 
+  for (const file of eventFiles) {
+    const event = require(`./events/${file}`);
+    if (event.once) {
+      client.once(event.name, (...args) => event.execute(...args));
+    } else {
+      client.on(event.name, (...args) => event.execute(...args));
+    }
+  }
+
   // When the client is ready, run this code (only once)
-  client.once("ready", () => {
-    console.log("Discord bot is Ready!");
-  });
+  // client.once("ready", () => {
+  //   console.log("Discord bot is Ready!");
+  // });
 
   client.on("interactionCreate", async (interaction: Interaction) => {
     if (!interaction.isCommand()) return;

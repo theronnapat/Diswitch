@@ -23,7 +23,8 @@ module.exports = {
 
     const kicked = new MessageEmbed()
       .setColor("#000000")
-      .setTitle(`You just kick <@${member.user.id}>!`)
+      // .setTitle()
+      .setDescription(`You just kick <@${member.user.id}> !`)
       .setTimestamp()
       .setFooter({ text: "Diswitch" });
 
@@ -34,8 +35,9 @@ module.exports = {
       .setFooter({ text: "Diswitch" });
 
     if (members.permissions.has("KICK_MEMBERS") == true) {
+      console.log(`<@!${member.user.id}>`)
       await member.kick();
-      await interaction.reply({ embeds: [kicked] });
+      await interaction.reply({ embeds: [kicked], ephemeral: true });
     } else {
       await interaction.reply({ embeds: [nopermission], ephemeral: true });
     }

@@ -28,7 +28,7 @@ module.exports = {
       await member.kick();
       await interaction.reply({ embeds: [kicked] });
     } else {
-      await interaction.reply({ embeds: [nopermission] });
+      await interaction.reply({ embeds: [nopermission], ephemeral: true });
     }
   },
 };

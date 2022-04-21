@@ -28,7 +28,7 @@ module.exports = {
       await member.ban();
       await interaction.reply({ embeds: [baned] });
     } else {
-      await interaction.reply({ embeds: [nopermission] });
+      await interaction.reply({ embeds: [nopermission], ephemeral: true });
     }
   },
 };

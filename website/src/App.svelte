@@ -1,5 +1,6 @@
 <script>
 	import Navbar from "./components/navbar.svelte"
+	import Heroes from "./components/heroes.svelte"
 </script>
 
 <head>
@@ -9,6 +10,8 @@
 </head>
 
 <Navbar />
+
+<Heroes />
 
 <main>
 	<h1 class="text-center text-sky-400 text-5xl mt-10">DisWitch</h1>

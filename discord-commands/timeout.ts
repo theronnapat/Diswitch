@@ -30,7 +30,7 @@ module.exports = {
 
     if (members.permissions.has("ADMINISTRATOR") == true) {
       await member.timeout(times * 60 * 1000);
-      await interaction.reply({ embeds: [timouted] });
+      await interaction.reply({ embeds: [timouted], ephemeral: true });
     } else {
       await interaction.reply({ embeds: [nopermission], ephemeral: true });
     }

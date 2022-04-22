@@ -26,7 +26,7 @@ module.exports = {
 
     if (members.permissions.has("BAN_MEMBERS") == true) {
       await member.ban();
-      await interaction.reply({ embeds: [baned] });
+      await interaction.reply({ embeds: [baned], ephemeral: true });
     } else {
       await interaction.reply({ embeds: [nopermission], ephemeral: true });
     }

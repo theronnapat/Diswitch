@@ -1,6 +1,13 @@
 import fs from "node:fs";
-import { Client, Collection, Intents, Interaction, Message, MessageEmbed } from "discord.js";
-import { server } from './data'
+import {
+  Client,
+  Collection,
+  Intents,
+  Interaction,
+  Message,
+  MessageEmbed,
+} from "discord.js";
+import { server } from "./data";
 
 import type { SlashCommandBuilder } from "@discordjs/builders";
 // import type { SendEmbed } from "./lib/MessageEmbed"
@@ -77,19 +84,19 @@ export default function discord() {
     }
   });
 
-  client.on('guildMemberAdd', (member) => {
+  client.on("guildMemberAdd", (member) => {
     const welcome = new MessageEmbed()
       .setTitle(`Welcome to ${server.name}`)
-      .setDescription(`Don't forget to read the rules at <#${server.rule}>!`)
+      .setDescription(`Don't forget to read the rules at <#${server.rule}>!`);
 
     client.users.fetch(member.user.id).then((user) => {
       try {
-        user.send({ embeds: [welcome] })
-      } catch (err){
-        console.log("err")
+        user.send({ embeds: [welcome] });
+      } catch (err) {
+        console.log("err");
       }
-    })
-  })
+    });
+  });
 
   // Intents.FLAGS.GUILD_MESSAGES
   client.on("messageCreate", async (msg: Message) => {

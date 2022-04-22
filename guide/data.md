@@ -1,2 +1,2 @@
-# Set Discord Server Data in `[data.ts](../data.ts)`
+# Set Discord Server Data in [`data.ts`](../data.ts)
 

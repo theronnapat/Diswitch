@@ -5,8 +5,8 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("slowmode")
     .setDescription("Delete specified amount of messages.")
-    .addNumberOption((option) => 
-        option.setName("time").setDescription("Slow mode time").setRequired(true)
+    .addNumberOption((option) =>
+      option.setName("time").setDescription("Slow mode time").setRequired(true)
     ),
   async execute(interaction: any) {
     const members = interaction.member as GuildMember;
@@ -14,7 +14,6 @@ module.exports = {
     const channel = interaction.channel;
 
     if (members.permissions.has("MANAGE_CHANNELS") == true) {
-
       await channel.setRateLimitPerUser(time);
 
       const successEmbed = new MessageEmbed()

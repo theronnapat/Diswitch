@@ -19,7 +19,7 @@ module.exports = {
 
       const successEmbed = new MessageEmbed()
         .setColor("#000000")
-        .setDescription(`You time out ${channel} for ${time}`)
+        .setDescription(`You set slowmode ${channel} for ${time}`)
         .setTimestamp()
         .setFooter({ text: "Diswitch" });
       await interaction.reply({ embeds: [successEmbed], ephemeral: true });

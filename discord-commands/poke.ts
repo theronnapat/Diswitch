@@ -4,7 +4,7 @@ import { MessageEmbed } from "discord.js";
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("poke")
-    .setDescription("Replies with Pong!")
+    .setDescription("Poke your friends!")
     .addUserOption((option) =>
       option.setName("target").setDescription("user to poke").setRequired(true)
     ),

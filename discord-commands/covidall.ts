@@ -8,7 +8,6 @@ module.exports = {
   async execute(interaction: any) {
     let response = await fetch(`https://disease.sh/v3/covid-19/all`);
     let data = await response.json();
-    console.log(data)
     const message = new MessageEmbed()
         .setTitle("Global Covid 19 Data")
         .addFields(
